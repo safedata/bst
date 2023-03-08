@@ -12,13 +12,13 @@ int main(int argc, char* argv[]) {
 	List *intvalues = readlistfromfile(argv[1]);
 	Node *root = NULL;
 	List *currentList = intvalues;
-	while (currentList!=NULL) {
+	while (currentList != NULL) {
 		root = addnode(root, currentList->value);
-		currentList= currentList->next;
+		currentList = currentList->next;
 	}
 	printnode(root);
 	currentList = intvalues;
-	while (currentList!=NULL) {
+	while (currentList != NULL) {
 		printf(" find value %d\n %d\n" ,currentList->value, binarysearch(root, currentList->value));
 		currentList= currentList->next;
 	}
